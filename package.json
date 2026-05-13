@@ -1,0 +1,19 @@
+{
+  "name": "fantastic-bassoon",
+  "version": "1.0.0",
+  "description": "BE Development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mrconfident/fantastic-bassoon.git"
+  },
+  "author": "Tarun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mrconfident/fantastic-bassoon/issues"
+  },
+  "homepage": "https://github.com/Mrconfident/fantastic-bassoon#readme"
+}
