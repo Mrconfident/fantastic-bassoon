@@ -32,18 +32,26 @@ fs.copyFile("tarun.txt", "tarun_copy.txt", (error) => {
   }
 });
 
-fs.unlink("tarun_copy.txt", (error) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("file deleted");
-  }
-});
+// fs.unlink("tarun_copy.txt", (error) => {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log("file deleted");
+//   }
+// });
 
-fs.rmdir("./copy", { recursive: true }, (error) => {
+// fs.rmdir("./copy", { recursive: true }, (error) => {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log("folder deleted");
+//   }
+// });
+
+fs.readFile("tarun.txt", "utf-8", (error, data) => {
   if (error) {
     console.log(error);
   } else {
-    console.log("folder deleted");
+    console.log(data);
   }
 });
