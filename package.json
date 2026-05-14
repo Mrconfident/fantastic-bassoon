@@ -1,26 +1,24 @@
 {
   "name": "fantastic-bassoon",
   "version": "1.0.0",
-  "description": "BE Development",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mrconfident/fantastic-bassoon.git"
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
-  "author": "Tarun",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Mrconfident/fantastic-bassoon/issues"
-  },
-  "homepage": "https://github.com/Mrconfident/fantastic-bassoon#readme",
   "devDependencies": {
     "nodemon": "^3.1.14"
   },
-  "dependencies": {
-    "cookie-parser": "^1.4.7",
-    "express": "^5.2.1"
-  }
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
