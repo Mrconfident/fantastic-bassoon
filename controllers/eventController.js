@@ -16,7 +16,7 @@ exports.createEvent = async (req, res) => {
       date,
       time,
       organizerId,
-      participants = [],
+      ["participants"]: participants || [],
     });
     res.status(201).json({
       message: "Event created successfully",
