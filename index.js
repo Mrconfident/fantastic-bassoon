@@ -23,6 +23,7 @@ const authRoutes = require("./routes/auth");
 const eventRoutes = require("./routes/event");
 
 const statsRoutes = require("./routes/stats");
+const { sendEmail } = require("./services/emailService");
 
 app.use("/api/auth", authRoutes);
 
@@ -36,6 +37,15 @@ app.get("/", (req, res) => {
     success: true,
     message: "Event API Running",
   });
+});
+app.get("/test-email", async (req, res) => {
+  await sendEmail({
+    to: process.env.EMAIL_USER,
+    subject: "Test",
+    text: "Email working",
+  });
+
+  res.send("Email sent");
 });
 
 // Swagger Config

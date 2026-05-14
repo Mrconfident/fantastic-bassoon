@@ -1,5 +1,5 @@
 const Event = require("../models/Event");
-
+const { sendEmail } = require("../services/emailService");
 exports.createEvent = async (req, res) => {
   try {
     const { title, date, time, participants } = req.body;
@@ -120,6 +120,12 @@ exports.registerForEvent = async (req, res) => {
     }
 
     event.participants.push(req.user.id);
+    // Send Email
+    await sendEmail({
+      to: req.user.email,
+      subject: "Event Registration",
+      text: `You registered for ${event.title}`,
+    });
     res.status(200).json({
       message: "Registered for event successfully",
       success: true,
